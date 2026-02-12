@@ -54,6 +54,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'tango_with_django_project.urls'
 
+LOGIN_URL = 'rango:login'  
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -102,6 +104,11 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+PASSWORD_HASHERS = (
+'django.contrib.auth.hashers.PBKDF2PasswordHasher', 
+'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher', 
+)
 
 
 # Internationalization
